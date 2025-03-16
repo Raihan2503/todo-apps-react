@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #888;
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.container .todo-input {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.container .todo-input input {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px 10px;
+    font-size: 1em;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+.container .todo-input button {
+    padding: 8px 15px;
+    background-color: rgb(58, 58, 187);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+/* todo list */
+.container .todo-list {
+    margin-top: 2em;
+    overflow-x: auto;
+}
+
+.container .todo-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.container .todo-list th, 
+.container .todo-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.container .todo-list th {
+    background-color: #f4f4f4;
+}
+
+.container .todo-list button {
+    padding: 8px 12px;
+    background-color: #f12c2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media Queries untuk Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .container .todo-input {
+        flex-direction: column;
+    }
+
+    .container .todo-input input {
+        width: 100%;
+    }
+
+    .container .todo-input button {
+        width: 100%;
+    }
+}
+
+p {
+    margin-top: 3em;
+    text-align: center;
+    color: #666;
+}
