@@ -133,17 +133,18 @@ body.dark-mode {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 70px; /* Lebih panjang agar berbentuk kapsul */
+    height: 30px;
     background-color: #333;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    justify-content: space-between;
+    border-radius: 30px; /* Bentuk pill capsule */
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    padding: 15px 10px;
+}
   
   .dark-mode-toggle:hover {
     background-color: #444;
@@ -152,7 +153,7 @@ body.dark-mode {
   
   /* ICON */
   .dark-mode-toggle .icon {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     transition: transform 0.3s ease;
   }
