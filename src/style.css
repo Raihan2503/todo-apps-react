@@ -12,14 +12,17 @@ body {
     min-height: 100vh;
     background-color: #888;
     padding: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Container utama */
 .container {
-    width: 100%;
+    width: 450px;
     background-color: #fff;
     padding: 30px 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container h3 {
@@ -29,6 +32,7 @@ body {
     font-size: 1.5em;
 }
 
+/* Input dan tombol */
 .container .todo-input {
     text-align: center;
     display: flex;
@@ -44,6 +48,7 @@ body {
     font-size: 1em;
     border: 1px solid #666;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .container .todo-input button {
@@ -56,7 +61,7 @@ body {
     border: none;
 }
 
-/* todo list */
+/* Tabel Todo List */
 .container .todo-list {
     margin-top: 2em;
     overflow-x: auto;
@@ -79,6 +84,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Tombol hapus */
 .container .todo-list button {
     padding: 8px 12px;
     background-color: #f12c2c;
@@ -88,10 +94,74 @@ body {
     cursor: pointer;
 }
 
-/* Media Queries untuk Responsiveness */
+/* DARK MODE */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  body.dark-mode .container {
+    background-color: #333;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .container h3 {
+    color: #fff;
+  }
+  
+  body.dark-mode .container .todo-input input {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #bbb;
+  }
+  
+  body.dark-mode .container .todo-list th {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  body.dark-mode .container .todo-list td {
+    border-bottom: 1px solid #666;
+  }
+  
+  body.dark-mode p {
+    color: #bbb;
+  }
+  
+  /* DARK MODE TOGGLE BUTTON */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode-toggle:hover {
+    background-color: #444;
+    transform: scale(1.1);
+  }
+  
+  /* ICON */
+  .dark-mode-toggle .icon {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+/* Responsiveness */
 @media (max-width: 480px) {
     .container {
-        padding: 20px 15px;
+        width: 100%;
+        padding: 10px 10px;
     }
 
     .container .todo-input {

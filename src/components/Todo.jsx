@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import components
 import TodoList from "./TodoList";
 import ButtonAdd from "./ButtonAdd";
+import ToggleTheme from "./ToggleTheme";
 
 function Todo() {
     const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem("todos")) || []);
@@ -38,6 +39,7 @@ function Todo() {
 
     return (
         <div className="container">
+            <ToggleTheme />
             <h3>To Do App</h3>
             <div className="todo-input">
                 <input value={input} onChange={inputChangeHandler} placeholder="Enter a task here"/>
