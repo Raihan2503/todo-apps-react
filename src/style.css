@@ -130,7 +130,7 @@ body.dark-mode {
   
   /* DARK MODE TOGGLE BUTTON */
   .dark-mode-toggle {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 70px; /* Lebih panjang agar berbentuk kapsul */
@@ -144,6 +144,7 @@ body.dark-mode {
     transition: background 0.3s ease, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px 10px;
+    outline: none;
 }
   
   .dark-mode-toggle:hover {
